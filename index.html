@@ -1,46 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hafsa Konain's UNCC Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            padding: 20px;
-        }
-        h1 {
-            color: #238f57;
-        }
-        a {
-            color: #238f57;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafsa Konain's Hawk Kangaroo || ITIS 3135 || index</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
+  <script src="scripts/headerfooter.js"></script>
 </head>
 <body>
-    <h1>I'm Hafsa Konain and this is the root of my website.</h1>
-    <p>Welcome to my UNCC webpage. Below is a link to my ITIS 3135 course folder.</p>
-    <a href="itis3135/">Go to ITIS 3135 Course Folder</a>
-
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+    <main>
+      <h2>Home</h2>
+      <p>Hello, you've made it to my ITIS 3135 course page</p>
+    </main>
     <footer>
-        <h2>Home</h2>
-        <p>Hello, you've made it to my ITIS 3135 course page!</p>
-        <p>
-            <a href="https://www.charlotte.edu" target="_blank">Charlotte.edu</a> || 
-            <a href="https://github.com/hkonain27" target="_blank">GitHub</a> || 
-            <a href="https://hkonain27.github.io" target="_blank">GitHub.io</a> || 
-            <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a> || 
-            <a href="https://www.codecademy.com" target="_blank">CodeAcademy</a> || 
-            <a href="https://www.linkedin.com/in/hafsakonain333" target="_blank">LinkedIn</a> || 
-            <a href="http://webpages.uncc.edu/hkonain/itis3135" target="_blank">My UNC Charlotte Webpage</a>
-        </p>
-        <p>Page Built by HKONAIN Studios ©2024 Certified in RWD, Certified in JS</p>
+      <div data-include="components/footer.html"></div>
     </footer>
+    <script>
+      document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+      document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      document.getElementById("validation_link_disability").setAttribute("href","https://wave.webaim.org/report#/" + location.href);
+   </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
