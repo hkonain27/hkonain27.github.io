@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             // Add the footer content
-            const footerContent = `<p>Page Built by <a href="smukthastudios.com.html">Sathvika Muktha</a> &copy;2024 <a href="https://www.freecodecamp.org/certification/smuktha/responsive-web-design">Certified in RWD</a>, <a href="https://www.freecodecamp.org/certification/smuktha/javascript-algorithms-and-data-structures-v8">Certified in JS</a></p>`;
+            const footerContent = `<p>Page Built by <a href=hkonain.com.html">Hafsa Konain</a> &copy;2024 <a href="https://www.freecodecamp.org/certification/hkonain/responsive-web-design">Certified in RWD</a>, <a href="https://www.freecodecamp.org/certification/hkonain/javascript-algorithms-and-data-structures-v8">Certified in JS</a></p>`;
             footerContainer.innerHTML += footerContent;
         })
         .catch(error => console.error("Error fetching footer menu:", error));
