@@ -37,7 +37,7 @@ main {
 }
 a:hover {
     color: #C26DBC;
-    text-decoration: line;
+    text-decoration: underline;
 }
 
 /* Sections */
