@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color:#BBE7FE;
+    background-color:#b7003a6b;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -9,8 +9,8 @@ body {
     font-size:15px;
 }
 header {
-    background-color: #00b78c8c;
-    color: #EFF1DB;
+    background-color: #b7003a6b;
+    color: #6f28a3ef;
     padding:20px;
     text-align: center;
 }
@@ -29,7 +29,7 @@ h3{
 
 
 a{
-    color: #75E6DA;
+    color: #6f28a3ef;
     text-decoration: none;
 }
 main {
@@ -37,7 +37,7 @@ main {
 }
 a:hover {
     color: #C26DBC;
-    text-decoration: underline;
+    text-decoration: line;
 }
 
 /* Sections */
