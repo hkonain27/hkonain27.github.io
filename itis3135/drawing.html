@@ -13,19 +13,27 @@
   <header>
     <div data-include="components/header.html"></div>
   </header>
-  <h2>Drawing</h2>
-  <main style="text-align: center;"></main>
+  <h2>Interactive Drawing: Recursive Snowflake</h2>
 
-    <footer>
-      <div data-include="components/footer.html"></div>
-    </footer>
-    <script>
-      document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-      document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-      document.getElementById("validation_link_disability").setAttribute("href","https://wave.webaim.org/report#/" + location.href);
-   </script>
-    <script src="scripts/HTMLInclude.min.js"></script>
-    <script src="scripts/sketch.js"></script>
+  <main style="text-align: center;">
+    <p>This interactive snowflake drawing features a bright pink background, adding a playful and vibrant twist to the classic imagery of winter. The warm pink backdrop contrasts beautifully with the intricate, icy patterns of the snowflake, creating a unique visual experience. The recursive nature of the drawing mirrors the natural process of snowflake formation, where smaller branches continuously split into even tinier branches, forming an elaborate, symmetrical design.</p>
+    
+    <p>As you interact with the sketch, you can observe the snowflake’s growth, with each segment carefully rendered in relation to its predecessors. The pink background highlights the delicate details of the snowflake, making the artwork both whimsical and engaging. The choice of color infuses a sense of warmth and joy, offering a fresh perspective on traditional winter themes. It invites viewers to appreciate the beauty of snowflakes beyond their usual icy setting, showcasing them in a new and imaginative light.</p>
+    
+    <div id="canvas-container"></div>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script>
+    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    document.getElementById("validation_link_disability").setAttribute("href","https://wave.webaim.org/report#/" + location.href);
+  </script>
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="scripts/sketch.js"></script>
 
 </body>
 </html>
