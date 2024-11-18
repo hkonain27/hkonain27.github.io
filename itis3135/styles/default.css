@@ -1,13 +1,14 @@
 body{
-    background-color: rgb(255, 211, 218);
+    background-color: #a386e1;
     text-align: center;
-    color: #7a337dd6;
+    color: #2a1762d6;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a{
     color: rgb(237, 100, 162);
     text-decoration: none;
+
 }
 
 a:hover {
@@ -53,16 +54,17 @@ th, td {
     color: White;
 }
 th{
-    background-color: rgba(255, 141, 160, 0.691);
+    background-color: rgba(255, 219, 141, 0.586);
     color: darkblue;
 }
 tr:nth-child(even) {
-    background-color:  rgba(126, 23, 142, 0.544);
+    background-color:  rgba(9, 77, 156, 0.804);
 }
 
 tr:nth-child(odd) {
-    background-color: rgba(194, 87, 210, 0.754);
+    background-color: rgba(87, 167, 210, 0.754);
 }
+
 
 /* Form Styling */
 .divider {
