@@ -7,7 +7,7 @@ function setup() {
 }
 
 function draw() {
-  background('Golden');
+  background('Hot Pink');
   let t = frameCount / 60; 
 
   for (let i = 0; i < random(5); i++) {
