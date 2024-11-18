@@ -1,46 +1,97 @@
-let snowflakes = []; // array to hold snowflake objects
+const courses = document.getElementById("courses");
+const addCourseBtn = document.getElementById("addCourseBtn");
+const courseInput = document.getElementById("courseInput");
+let count = 0;
 
-function setup() {
-  createCanvas(600, 400);
-  fill(500);
-  noStroke();
-}
+courseInput.addEventListener("click", addCourse);
 
-function draw() {
-  background('hotpink');
-  let t = frameCount / 60; 
-
-  for (let i = 0; i < random(5); i++) {
-    snowflakes.push(new snowflake());
-  }
-
-  for (let flake of snowflakes) {
-    flake.update(t); 
-    flake.display(); 
-  }
-}
-function snowflake() {
-  this.posX = 0;
-  this.posY = random(-50, 0);
-  this.initialangle = random(0, 2 * PI);
-  this.size = random(2, 5);
-
-  this.radius = sqrt(random(pow(width / 2, 2)));
-
-  this.update = function(time) {
-    let w = 0.6; 
-    let angle = w * time + this.initialangle;
-    this.posX = width / 2 + this.radius * sin(angle);
-
-    this.posY += pow(this.size, 0.5);
-
-    if (this.posY > height) {
-      let index = snowflakes.indexOf(this);
-      snowflakes.splice(index, 1);
+function addCourse() {
+    if (!document.getElementById('deleteBtn')) {
+        deleteBTN();
     }
-  };
-
-  this.display = function() {
-    ellipse(this.posX, this.posY, this.size);
-  };
+    let addInput = document.createElement('input');
+    addInput.type = 'text';
+    addInput.id = 'coursesUserTaken'; 
+    addInput.className = 'coursesUserTaken';
+    courses.appendChild(addInput);
+    let lineBreak = document.createElement('br');
+    courses.appendChild(lineBreak);
+    count++;
 }
+function displayCourses() {
+    let courseList = ''; 
+    for(let x = 0; x < courses.children.length; x++) {
+        if(courses.children[x].value){
+            courseList += `<li>${courses.children[x].value}</li>`;
+        }
+    }
+    return courseList;
+}
+function deleteBTN() {
+    let deleteBtn = document.createElement('input');
+    deleteBtn.type = 'button';
+    deleteBtn.id = 'deleteBtn';
+    deleteBtn.className = 'deleteBtn';
+    deleteBtn.value = 'Delete';
+    addCourseBtn.appendChild(deleteBtn);
+    let spacing = document.createElement('br');
+    addCourseBtn.appendChild(spacing);
+
+    deleteBtn.addEventListener("click", () => {
+        if (courses.lastElementChild) {
+            courses.removeChild(courses.lastElementChild);
+            courses.removeChild(courses.lastElementChild);
+            count--; 
+            if (count === 0) {
+                deleteBtn.remove();
+            }
+        }
+    });
+}
+
+const name1 = document.getElementById("name");
+const mascot = document.getElementById("mascot");
+const image = document.getElementById("image");
+const caption = document.getElementById("caption");
+const personal = document.getElementById("personal");
+const professional = document.getElementById("professional");
+const academic = document.getElementById("academic");
+const web_dev = document.getElementById("web-dev");
+const platform = document.getElementById("platform");
+const funny = document.getElementById("funny");
+const anything_else = document.getElementById("else");
+const intro = document.getElementById("intro");
+const form = document.getElementById("form");
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const courseList = displayCourses();
+
+    let imageLoad = image.files[0];
+    const imageURL = URL.createObjectURL(imageLoad);
+    let text = "<img src=\"" + imageURL + "\" >";
+    
+    intro.innerHTML = '';
+    intro.innerHTML = `
+    <h3> ${name1.value} || ${mascot.value}</h3>
+    <figure>
+        ${text}
+        <figcaption>${caption.value}</figcaption>
+    </figure>
+        <ul>
+            <li><strong>Personal Background:</strong> ${personal.value}</li>
+            <li><strong>Professional Background:</strong>  ${professional.value}</li>
+            <li><strong>Academic Background:</strong> ${academic.value}</li>
+            <li><strong>Web-development background:</strong> ${web_dev.value}</li>
+            <li><strong>Primary Computer Platform:</strong>  ${platform.value}</li>
+            <li><strong>Courses:</strong>
+                <ul>
+                    ${courseList}
+                </ul>
+            </li>
+            <li><strong>Funny/Interesting thing to remember me by:</strong> ${funny.value}</li> 
+            <li><strong>I'd also like to share:</strong> ${anything_else.value}</li>
+        </ul>
+       
+    `;
+});
