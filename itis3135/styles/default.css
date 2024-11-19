@@ -1,6 +1,18 @@
-/* Body Styling with Subtle Texture */
+//* Body Styling with Subtle Animated Background */
+@keyframes gradientAnimation {
+    0% {
+        background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(45deg, #ffdde1, #fbc2eb);
+    }
+    50% {
+        background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(45deg, #fbc2eb, #c3aed6);
+    }
+    100% {
+        background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(45deg, #c3aed6, #ffdde1);
+    }
+}
+
 body {
-    background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(45deg, #ffdde1, #fbc2eb);
+    animation: gradientAnimation 15s ease infinite;
     background-size: auto, cover;
     background-repeat: repeat;
     background-blend-mode: overlay;
@@ -19,12 +31,24 @@ a:hover {
     color: rgba(127, 37, 211, 0.404);
 }
 
-/* Main Content */
+/* Main Content with Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 main {
     text-align: left;
     margin-left: 20%;
     margin-right: 20%;
     max-width: 1200px;
+    animation: fadeIn 1.5s ease forwards;
 }
 
 /* Heading Styles */
@@ -36,11 +60,17 @@ h3 {
     text-align: center;
 }
 
-/* Image Styling */
+/* Image Styling with Bounce Animation */
 img {
     width: 40%;
+    transition: transform 0.5s ease;
 }
 
+img:hover {
+    transform: translateY(-10px);
+}
+
+/* Figure Styling */
 figure {
     text-align: center;
     font-style: italic;
@@ -58,7 +88,7 @@ th, td {
     text-align: left;
     padding: 10px;
     border: 2px solid black;
-    color: White;
+    color: white;
 }
 
 th {
@@ -93,6 +123,7 @@ form {
     padding: 1px;
 }
 
+/* Button Hover Animation */
 input[type="submit"],
 input[type="reset"] {
     background-color: rgba(194, 87, 210, 0.742);
@@ -101,11 +132,13 @@ input[type="reset"] {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
     background-color: rgba(106, 58, 228, 0.742);
+    transform: scale(1.05);
 }
 
 /* Custom Butterfly Element (if used) */
@@ -116,7 +149,18 @@ butterfly {
     width: 25px;
 }
 
-/* Slideshow Navigation */
+/* Slideshow Navigation with Slide Animation */
+@keyframes slide {
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .prev {
     cursor: pointer;
     position: absolute;
@@ -127,6 +171,7 @@ butterfly {
     margin-top: 30px;
     color: goldenrod;
     background-color: rgba(50, 9, 139, 0.721);
+    animation: slide 1s ease;
 }
 
 .next {
@@ -139,6 +184,7 @@ butterfly {
     margin-top: 30px;
     color: goldenrod;
     background-color: rgba(50, 9, 139, 0.721);
+    animation: slide 1s ease;
 }
 
 /* Responsive Design */
