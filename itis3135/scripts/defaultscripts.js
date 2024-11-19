@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         var name = document.getElementById('name').value;
         var mood = document.getElementById('mood').value;
-        document.getElementById('greeting').textContent = "Hello " + name + "!! Sagacious Mermaid welcomes you!! We're glad you are doing " + mood + " today!";
+        document.getElementById('greeting').textContent = "Hello " + name + "!! Hawk Kangaroo welcomes you!! We're glad you are doing " + mood + " today!";
     });
 });
 
