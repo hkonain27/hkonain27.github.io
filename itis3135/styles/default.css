@@ -1,178 +1,79 @@
-/* Refined Minimalistic Theme with Subtle Design */
+/* Elegant Vibrant Theme with Denim Blue, Golden, Beige, Pink, and Green */
+
 body {
-    background: linear-gradient(to right, #f5f5f5, #e0e0e0); /* Soft gradient background */
+    background: linear-gradient(to bottom, #f0f0f0, #e3e3e3); /* Light gradient background for a subtle effect */
     color: #333333;
     font-family: 'Helvetica', 'Arial', sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
-}
-
-a {
-    color: #00796b; /* Rich teal for links */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #d32f2f; /* Bright red for hover effect */
+    text-align: center;
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #264d73; /* Denim Blue */
+    color: white;
     padding: 20px;
-    border-bottom: 2px solid #e0e0e0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 3em;
-    color: #333333;
+    font-size: 3.5em;
     font-weight: 700;
+    color: #f2f2f2; /* Soft off-white text color */
+}
+
+nav {
+    background-color: #f4c542; /* Golden color for navigation bar */
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d6336c; /* Pink hover effect */
 }
 
 main {
-    text-align: left;
-    margin-left: 10%;
-    margin-right: 10%;
-    max-width: 1200px;
+    background-color: #f7f7f7;
     padding: 40px 20px;
-    background: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    max-width: 1200px;
+    margin: 20px auto;
     border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    text-align: center;
-    color: #4caf50; /* Soft green accent */
+    color: #4CAF50; /* Green for section headers */
     font-size: 2.2em;
-    font-weight: 500;
+    font-weight: 600;
 }
 
-h3 {
-    text-align: center;
-    color: #888888;
-    font-size: 1.6em;
+p {
+    color: #666666; /* Light gray for paragraphs */
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 10px 0;
 }
 
 img {
-    width: 60%;
-    border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
-figure {
-    text-align: center;
-    font-style: italic;
-    color: #b0b0b0;
+img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
-/* Table Styling */
-table {
-    border-style: solid;
-    border-collapse: collapse;
-    width: 100%;
-    color: #333333;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 12px;
-    border: 1px solid #e0e0e0;
-    text-align: left;
-}
-
-th {
-    background-color: #00796b; /* Rich teal for header */
-    color: white;
-    font-weight: bold;
-}
-
-tr:nth-child(even) {
-    background-color: #f1f1f1; /* Subtle light background for even rows */
-}
-
-tr:nth-child(odd) {
-    background-color: #ffffff; /* Slightly off-white for odd rows */
-}
-
-/* Form Styling */
-.divider {
-    border: 4px solid #e0e0e0;
-    margin: 20px 0;
-}
-
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-select {
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid #00796b;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    color: #333333;
-    transition: border 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="email"]:focus,
-select:focus {
-    border-color: #4caf50; /* Green focus color */
-}
-
-form {
-    padding: 20px;
-    background-color: #fafafa;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-input[type="submit"],
-input[type="reset"] {
-    background-color: #00796b; /* Rich teal for buttons */
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-    background-color: #004d40; /* Darker teal on hover */
-}
-
-/* Slideshow Buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    padding: 10px;
-    color: #00796b;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    border: 1px solid #e0e0e0;
-    transition: background-color 0.3s ease;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.prev {
-    left: 20px;
-}
-
-.next {
-    right: 20px;
-}
-
-/* Background Pattern */
+/* Subtle background pattern */
 body::before {
     content: "";
     position: absolute;
@@ -180,62 +81,158 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/soft-wave.png') repeat;
-    opacity: 0.1; /* Subtle texture overlay */
+    background: url('https://www.transparenttextures.com/patterns/diag-stripes-light.png') repeat; /* Subtle diagonal stripes */
+    opacity: 0.1; /* Low opacity to avoid overwhelming the content */
     pointer-events: none;
+}
+
+footer {
+    background-color: #264d73; /* Denim Blue for footer */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #f4c542; /* Golden color for footer links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #d6336c; /* Pink hover effect */
+}
+
+/* Button Styles */
+button {
+    background-color: #264d73; /* Denim Blue for buttons */
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d6336c; /* Pink hover effect */
+}
+
+/* Form Elements */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #264d73; /* Denim Blue focus effect */
+}
+
+form {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #f0f0f0;
+    text-align: left;
+}
+
+th {
+    background-color: #f4c542; /* Golden for table headers */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #e3e3e3; /* Light beige for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Footer Social Icons */
+.social-icons {
+    margin: 10px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f4c542; /* Golden on hover */
 }
 
 /* Responsive Design */
 @media screen and (max-width: 1200px) {
-    h1, h2 {
-        font-size: 2.5em;
+    h1 {
+        font-size: 2.8em;
     }
 
-    .nav1, .nav2 {
-        font-size: 20px;
+    h2 {
+        font-size: 2em;
     }
 
-    .two {
-        font-size: 16px;
-    }
-
-    img {
-        max-width: 90%;
+    nav a {
+        font-size: 1em;
     }
 }
 
 @media screen and (max-width: 900px) {
-    h1, h2 {
-        font-size: 2.2em;
+    h1 {
+        font-size: 2.5em;
     }
 
-    .nav1, .nav2 {
-        font-size: 18px;
+    h2 {
+        font-size: 1.8em;
     }
 
-    .two {
-        font-size: 14px;
-    }
-
-    img {
-        max-width: 80%;
+    nav a {
+        font-size: 1.1em;
     }
 }
 
 @media screen and (max-width: 600px) {
-    h1, h2 {
-        font-size: 1.8em;
+    h1 {
+        font-size: 2em;
     }
 
-    .nav1, .nav2 {
-        font-size: 16px;
-    }
-
-    .two {
-        font-size: 12px;
+    h2 {
+        font-size: 1.6em;
     }
 
     img {
-        max-width: 70%;
+        max-width: 100%;
+    }
+
+    nav {
+        font-size: 1em;
     }
 }
