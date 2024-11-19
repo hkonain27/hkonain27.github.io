@@ -19,27 +19,27 @@ function showPolygonName() {
     const polygonName = (absoluteNumber < 11) ? polygonNames[absoluteNumber-1] : 'Invalid Input';
     alert('The name of the polygon with ' + absoluteNumber + ' sides is ' + polygonName);
 }
-function mermaid(){
-    let mermaid = document.getElementById("mermaid").value;
+function kangaroo(){
+    let kangaroo = document.getElementById("kangaroo").value;
     if(mermaid === "yes"){
-        let answerMermaid = "A mermaid is an aquatic creature with the head and upper body of a female human and the tail of a fish.";
-        document.getElementById("answerMermaid").innerHTML = answerMermaid; 
+        let answerKangaroo = "A kangaroo is a marsupial native to Australia and known for its powerful legs, long tail, and distinctive method of movement: hopping.";
+        document.getElementById("answerKangaroo").innerHTML = answerKangaroo; 
     }
-    else if (mermaid === "no") {
-        let answerMermaid = "While there is no evidence that mermaids exist outside folklore, reports of mermaid sightings continue to the present day";
-        document.getElementById("answerMermaid").innerHTML = answerMermaid; 
+    else if (kangaroo === "no") {
+        let answerKangaroo = "If you can't travel to Australia, visiting a nearby zoo or park that houses kangaroos is the next best thing";
+        document.getElementById("answerKangaroo").innerHTML = answerKangaroo; 
     } else {
-        let answerMermaid = "Please answer with 'yes' or 'no'.";
-        document.getElementById("answerMermaid").innerHTML = answerMermaid; 
+        let answerKangaroo = "Please answer with 'yes' or 'no'.";
+        document.getElementById("answerKangaroo").innerHTML = answerKangaroo; 
     }
 }
 
 function generateCompliment() {
-    const c = ["Your positivity is infectious; you have a way of brightening everyone's day!!",
-    "Just like a mermaid's enchanting allure, your presence captivates everyone around you!!",
-    "Your kindness and compassion flow as freely as the ocean waves that cradle a mermaid's home",
-    "Your radiant beauty rivals that of a mermaid basking in the shimmering light of the sea!!",
-    "Like a mermaid's mystical charm, your inner strength and resilience are as deep as the ocean itself"];
+    const c = ["Your energy is as boundless as a kangaroo's leap, always inspiring those around you!!",
+        "Just like a kangaroo's resilience in the wild, your determination knows no bounds!!",
+        "Your warmth and kindness create a sense of community, just like a kangaroo in its mob!!",
+        "Your strength and grace mirror a kangaroo's powerful hop, always aiming high!!",
+        "Like a kangaroo's balance, you bring harmony and steadiness wherever you go!!"];
     const randomC = c[Math.floor(Math.random() * c.length)];
     alert("Compliment: " + randomC);
 }
@@ -48,10 +48,10 @@ function randomFact() {
     document.getElementById("randomFact").innerText = "A shrimp's heart is in its head.";
 }
 
-function randomMermaidFact() {
-    document.getElementById("randomMermaidFact").innerText = "Being a magical creature, mermaids are often depicted as having magical powers. Magic powers allow one to manipulate the elements and defy the laws of physics. There are all kinds of magic powers: Mind-reading, flying, invisibility, shapeshifting, controlling nature, and many more.";
+function randomKangarooFact() {
+    document.getElementById("randomKangarooFact").innerText = "While they're famous for their hopping on land, kangaroos are surprisingly skilled swimmers. They use their powerful hind legs to propel themselves through the water and their tail to steer. Swimming helps them escape predators and cross rivers or lakes in their habitat. Pretty cool, right? 🦘";
 }
 
 function sayGoodbye() {
-    document.getElementById("goodBye").innerText = "Adios! Thanks for visiting Sagacious Mermaid.";
+    document.getElementById("goodBye").innerText = "Adios! Thanks for visiting Hawk Kangaroo.";
 }
