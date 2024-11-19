@@ -1,9 +1,8 @@
 body {
-    background: linear-gradient(to bottom, #ff7e5f, #feb47b); /* Sunset gradient */
-    /* Alternatively, you can use this gradient with more colors */
-    /* background: linear-gradient(to bottom, #ff7e5f, #feb47b, #ffcc70, #fff6b7); */
+    background-color: #f5f5dc; /* Beige background color for neutrality */
+    background-image: repeating-linear-gradient(45deg, #f5f5dc, #f5f5dc 10px, #1e3a5f 10px, #1e3a5f 20px); /* Diagonal stripes with beige and denim blue */
     text-align: center;
-    color: #7a337dd6;
+    color: #7a337dd6; /* Text color */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -46,7 +45,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     text-align: center;
-}
+}  
 
 th, td {
     text-align: left;
@@ -109,7 +108,7 @@ butterfly {
     width: 25px;
 }
 
-/* Slideshow */
+/* Slideshow */  
 .prev {
     cursor: pointer;
     position: absolute;
