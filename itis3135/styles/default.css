@@ -1,8 +1,11 @@
 body {
-    background-color: #f5f5dc; /* Beige background color for neutrality */
-    background-image: repeating-linear-gradient(45deg, #f5f5dc 0px, #f5f5dc 10px, #1e3a5f 10px, #1e3a5f 20px); /* Diagonal stripes with beige and denim blue */
+    background-color: #f5f5dc; /* Light beige background */
+    background-image: 
+        linear-gradient(90deg, rgba(30, 58, 95, 0.2) 1px, transparent 1px), /* Vertical lines */
+        linear-gradient(180deg, rgba(30, 58, 95, 0.2) 1px, transparent 1px); /* Horizontal lines */
+    background-size: 50px 50px; /* Set grid size */
     text-align: center;
-    color: #7a337dd6; /* Text color */
+    color: #7a337dd6;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -45,7 +48,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     text-align: center;
-}  
+}
 
 th, td {
     text-align: left;
@@ -108,7 +111,7 @@ butterfly {
     width: 25px;
 }
 
-/* Slideshow */  
+/* Slideshow */
 .prev {
     cursor: pointer;
     position: absolute;
