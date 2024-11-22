@@ -1,43 +1,44 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Fetch JSON data for the first navbar menu
     fetch("mainmenu.json")
-        .then(response => response.json())
-        .then(data => {
-            const menuContainer = document.getElementById("menu-container");
-            data.forEach(item => {
-                const menuItem = createMenuItem(item);
-                menuContainer.appendChild(menuItem);
-            });
-        })
-        .catch(error => console.error("Error fetching first navbar menu:", error));
+    .then(response => response.json())
+    .then(data => {
+      const menuContainer = document.getElementById("menu-container");
+      data.forEach(item => {
+        const menuItem = document.createElement("div");
+        menuItem.innerHTML = `<a href="${item.url}" target="_blank">${item.name}</a>`;
+        menuContainer.appendChild(menuItem);
+      });
+    })
+    .catch(error => console.error("Error fetching Main Menu:", error));
+  
 
     //Fetch JSON data for the subnav bar menu (submenu.json)
     fetch("submenu.json")
-        .then(response => response.json())
-        .then(data => {
-            const subnavContainer = document.getElementById("subnav-container");
-            data.forEach(item => {
-                const menuItem = createMenuItem(item);
-                subnavContainer.appendChild(menuItem);
-            });
-        })
-        .catch(error => console.error("Error fetching subnav bar menu:", error));
+  .then(response => response.json())
+  .then(data => {
+    const subnavContainer = document.getElementById("subnav-container");
+    data.forEach(item => {
+      const subMenuItem = document.createElement("div");
+      subMenuItem.innerHTML = `<a href="${item.url}" target="_blank">${item.name}</a>`;
+      subnavContainer.appendChild(subMenuItem);
+    });
+  })
+  .catch(error => console.error("Error fetching Submenu:", error));
 
     // Fetch JSON data for the footer menu
     fetch("lastmenu.json")
-        .then(response => response.json())
-        .then(data => {
-            const footerContainer = document.getElementById("footer-container");
-            data.forEach(item => {
-                const menuItem = createMenuItem(item);
-                footerContainer.appendChild(menuItem);
-            });
+  .then(response => response.json())
+  .then(data => {
+    const footerContainer = document.getElementById("footer-container");
+    data.forEach(item => {
+      const footerItem = document.createElement("div");
+      footerItem.innerHTML = `<a href="${item.url}" target="_blank">${item.name}</a>`;
+      footerContainer.appendChild(footerItem);
+    });
+  })
+  .catch(error => console.error("Error fetching Footer Links:", error));
 
-            // Add the footer content
-            const footerContent = `<p>Page Built by <a href=hkonain.com.html">Hafsa Konain</a> &copy;2024 <a href="https://www.freecodecamp.org/certification/hkonain/responsive-web-design">Certified in RWD</a>, <a href="https://www.freecodecamp.org/certification/hkonain/javascript-algorithms-and-data-structures-v8">Certified in JS</a></p>`;
-            footerContainer.innerHTML += footerContent;
-        })
-        .catch(error => console.error("Error fetching footer menu:", error));
 
     // Function to create a menu item
     function createMenuItem(item) {
