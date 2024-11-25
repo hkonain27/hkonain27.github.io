@@ -76,7 +76,7 @@ function validateCSS() {
 }
 
 // Function to validate AIM (Accessibility, SEO, and Mobile-friendliness)
-function validateAIM() {
+//function validateAIM() {
     // Replace the URL with the tool you prefer for accessibility, SEO, and mobile-friendliness validation
-    window.open("https://webaim.org/search/?q=afsd", "_blank");
-}
+    //window.open("https://webaim.org/search/?q=afsd", "_blank");
+//}
