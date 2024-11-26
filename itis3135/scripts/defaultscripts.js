@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         var name = document.getElementById('name').value;
         var mood = document.getElementById('mood').value;
-        document.getElementById('greeting').textContent = "Hello " + name + "!! Hawk Kangaroo welcomes you!! We're glad you are doing " + mood + " today!";
+        document.getElementById('greeting').textContent = "Hello " + name + "!! Humble Kangaroo welcomes you!! We're glad you are doing " + mood + " today!";
     });
 });
 
@@ -53,5 +53,5 @@ function randomKangarooFact() {
 }
 
 function sayGoodbye() {
-    document.getElementById("goodBye").innerText = "Adios! Thanks for visiting Hawk Kangaroo.";
+    document.getElementById("goodBye").innerText = "Adios! Thanks for visiting Humble Kangaroo.";
 }
