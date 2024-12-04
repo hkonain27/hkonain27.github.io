@@ -1,0 +1,30 @@
+{
+    "mainMenu": [
+      { "name": "Home", "url": "index.html" },
+      { "name": "Introduction", "url": "introduction.html" },
+      { "name": "Contract", "url": "contract.html" },
+      { "name": "About", "url": "about.html" },
+      { "name": "Website Evaluations", "url": "website_evaluations.html" },
+      { "name": "Tables", "url": "tables.html" },
+      { "name": "Forms", "url": "forms.html" },
+      { "name": "Project Overview", "url": "project_overview.html" },
+      { "name": "Peer Review 1", "url": "peerreview1.html" },
+      { "name": "Peer Review 2", "url": "peerreview2.html" },
+      { "name": "First Scripts", "url": "firstscripts.html" },
+      { "name": "BYO", "url": "byo_intro.html" },
+      { "name": "Slideshow", "url": "slideshow.html" },
+      { "name": "Drawing", "url": "drawing.html" },
+      { "name": "CRAPPY site", "url": "stuff/crappysite.html" },
+      { "name": "Hobby", "url": "hobby/hobby.html" },
+      { "name": "Client Project", "url": "client_project/index.html" }
+    ],
+    "footerMenu": [
+        {"name": "CLT Page", "url": "https://webpages.uncc.edu/hkonain/"},
+        {"name": "Github Page", "url": "https://github.com/hkonain27/hkonain27.github.io"},
+        {"name": "Github Course Page", "url": "https://hkonain27.github.io/itis3135"},
+        {"name": "Github", "url": "https://github.com/hkonain27"},
+        {"name": "Freecode Camp", "url": "https://www.freecodecamp.org/hkonain"},
+        {"name": "CodeAcademy", "url": "https://www.codecademy.com/profiles/hkonain27"},
+        {"name": "LinkedIn", "url": "https://www.linkedin.com/in/hafsakonain333/"}
+    ]
+  }
