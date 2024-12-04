@@ -15,18 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "BYO", url: "byo_intro.html" },
         { name: "Slideshow", url: "slideshow.html" },
         { name: "Drawing", url: "drawing.html" },
-        { name: "CRAPPY", url: "stuff/c+@@pp^yy.htm" },
-        { name: "Hobby", url: "hobby/index.html" },
+        { name: "CRAPPY", url: "stuff/crappysite.html" },
+        { name: "Hobby", url: "hobby/hobby.html" },
         { name: "Client Project", url: "client_project/index.html" }
     ];
 
     const navFooterData = [
-        { name: "Webpage", url: "https://webpages.charlotte.edu/ghowale/" },
-        { name: "Freecodecamp", url: "https://www.freecodecamp.org/grishmahowale" },
-        { name: "Codeacademy", url: "https://www.codecademy.com/profiles/grishmahowale" },
-        { name: "Github", url: "https://github.com/grishmahowale12/" },
-        { name: "Github.io", url: "https://grishmahowale12.github.io/" },
-        { name: "LinkedIn", url: "https://www.linkedin.com/in/grishma-howale-75a2b1274/" }
+      
+    {"name": "CLT Web", "url": "https://webpages.uncc.edu/hkonain/"},
+    {"name": "Github Page", "url": "https://github.com/hkonain27/hkonain27.github.io"},
+    {"name": "Github Course Page", "url": "https://hkonain27.github.io/itis3135"},
+    {"name": "Github", "url": "https://github.com/hkonain27"},
+    {"name": "Freecode Camp", "url": "https://www.freecodecamp.org/hkonain"},
+    {"name": "CodeAcademy", "url": "https://www.codecademy.com/profiles/hkonain27"},
+    {"name": "LinkedIn", "url": "https://www.linkedin.com/in/hafsakonain333/"}
     ];
 
     // Helper function to create menu links and prevent duplication
@@ -66,10 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a href="ghboutique.com.html">Gh Boutique</a> © 2024
             </p>
             <p>
-                <a href="https://www.freecodecamp.org/certification/grishmahowale/responsive-web-design" target="_blank">
+                <a href="https://www.freecodecamp.org/certification/hkonain/responsive-web-design" target="_blank">
                     Certified in Responsive Web Design
                 </a>,
-                <a href="https://www.freecodecamp.org/certification/grishmahowale/javascript-algorithms-and-data-structures-v8" target="_blank">
+                <a href="https://www.freecodecamp.org/certification/hkonain/javascript-algorithms-and-data-structures-v8" target="_blank">
                     Certified in JS
                 </a>
             </p>

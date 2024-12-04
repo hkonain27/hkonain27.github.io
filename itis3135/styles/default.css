@@ -1,247 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Webpage</title>
-    <style>
-        body {
-            background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(45deg, #1560BD, #1E90FF);
+
+        /* General Body Styles */
+body {
+    background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(45deg, #1560BD, #1E90FF);
             background-size: auto, cover;
             background-repeat: repeat;
             background-blend-mode: overlay;
             text-align: center;
-            background-color: #1560BD; /* Denim Blue */
-            color: #FF1493; /* Pink */
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
+    background-color: rgba(65, 154, 218, 0.748);
+    color: rgba(71, 52, 6, 0.873);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-        /* Style for Links */
-        a {
-            color: #FFD700; /* Gold */
-            text-decoration: none;
-        }
+/* Style for Links */
+a {
+    color: rgb(11, 50, 134);
+    text-decoration: none;
+}
 
-        a:hover {
-            color: #8B4513; /* Brown */
-            text-decoration: underline;
-        }
+a:hover {
+    color: mediumvioletred;
+    text-decoration: underline;
+}
 
-        a:visited {
-            color: #800000; /* Maroon */
-        }
+a:visited {
+    color: purple;
+}
 
-        /* Layout for Header, Main, Footer */
-        header, main, footer {
-            width: 90%; /* Flexible width */
-            max-width: 1200px; /* Ensures readability on large screens */
-            margin: 0 auto; /* Centers content horizontally */
-        }
+/* Layout for Header, Main, Footer */
+header, main, footer {
+    width: 90%; /* Flexible width */
+    max-width: 1200px; /* Ensures readability on large screens */
+    margin: 0 auto; /* Centers content horizontally */
+}
 
-        /* Figure Styling */
-        body figure {
-            width: 90%;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
+/* Figure Styling */
+body figure {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-        body figure img {
-            height: 350px;
-        }
+body figure img {
+    height: 350px;
+}
 
-        /* Alignment Styling */
-        header, header p, footer, h2, h3 {
-            text-align: center;
-            color: #FFFFFF; /* White for headers */
-        }
+/* Alignment Styling */
+header, header p, footer, h2, h3 {
+    text-align: center;
+}
 
-        /* Table Styling */
-        table {
-            border-style: solid;
-            border-collapse: collapse;
-            width: 100%;
-            table-layout: fixed;
-            text-align: center;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
+/* Table Styling */
+table {
+    border-style: solid;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        th, td {
-            padding: 15px 20px;
-            text-align: center;
-            font-size: 1em;
-            border-bottom: 1px solid #686963;
-            color: #000000; /* Black */
-        }
+th, td {
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1em;
+    border-bottom: 1px solid #686963;
+}
 
-        th {
-            background-color: #8B4513; /* Brown */
-            color: #FFD700; /* Gold */
-        }
+th {
+    background-color: rgba(103, 22, 242, 0.745);
+    color: white;
+}
 
-        tr:nth-child(even) {
-            background-color: rgba(255, 182, 193, 0.6); /* Light Pink */
-        }
+tr:nth-child(even) {
+    background-color: rgba(116, 88, 202, 0.6);
+}
 
-        tr:nth-child(odd) {
-            background-color: rgba(255, 105, 180, 0.8); /* Hot Pink */
-        }
+tr:nth-child(odd) {
+    background-color: rgba(113, 110, 207, 0.8);
+}
 
-        /* Form Styling */
-        input[type="text"], input[type="tel"], input[type="email"], select {
-            font-size: 16px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            width: 100%;
-            color: #000000; /* Black */
-        }
+/* Form Styling */
+input[type="text"], input[type="tel"], input[type="email"], select {
+    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+}
 
-        input[type="checkbox"], input[type="radio"] {
-            margin-right: 5px;
-        }
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 5px;
+}
 
-        input[type="submit"], input[type="reset"] {
-            background-color: #FFD700; /* Gold */
-            color: #000000; /* Black */
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 8px;
-            font-weight: bold;
-        }
+input[type="submit"], input[type="reset"] {
+    background-color: #107999;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+}
 
-        input[type="submit"]:hover, input[type="reset"]:hover {
-            background-color: #8B4513; /* Brown */
-        }
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #1a98cea5;
+}
 
-        .divider {
-            background-color: #F5DEB3; /* Wheat */
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
+.divider {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-top: 20px;
+}
 
-        /* Slideshow Styling */
-        .slideshow-container {
-            position: relative;
-            max-width: 600px;
-            margin: auto;
-        }
+/* Media Queries */
 
-        .slides .slide {
-            display: none;
-            text-align: center;
-        }
+/* Large Screens (Desktops) */
+@media screen and (min-width: 981px) {
+    main {
+        width: 80%;
+    }
+    body figure img {
+        height: 400px;
+    }
+}
 
-        .slides .slide img {
-            width: 80%;
-            max-height: 300px;
-            object-fit: contain;
-            margin: auto;
-            display: block;
-        }
+/* Medium Screens (Tablets) */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    main {
+        width: 95%;
+    }
+    body figure img {
+        height: 300px;
+    }
+    table th, table td {
+        font-size: 0.9em;
+    }
+}
 
-        .caption {
-            color: #FFFFFF;
-            font-size: 16px;
-            padding: 8px;
-            background: rgba(0, 0, 0, 0.5);
-        }
+/* Small Screens (Mobiles) */
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%;
+    }
+    body figure img {
+        height: 250px;
+    }
+    table th, table td {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+    input[type="submit"], input[type="reset"] {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
 
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 10px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.3s;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
+.hidden {
+    display: none;
+}
 
-        .prev {
-            left: 0;
-            border-radius: 3px 0 0 3px;
-        }
+#courses-list + button {
+    display: block; /* Ensures the Add Course button takes the full line */
+    margin-bottom: 10px; /* Adds spacing below the button */
+}
 
-        .next {
-            right: 0;
-            border-radius: 0 3px 3px 0;
-        }
+label[for="funny"], 
+#funny {
+    display: block; /* Forces each label and input to be on its own line */
+    margin-top: 10px; /* Adds spacing above the Funny Thing section */
+}
 
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        /* Make the sitemap image smaller */
-        #sitemap-figure img {
-            width: 70%; /* Adjust the width as needed */
-            max-width: 600px; /* Ensure it doesn't grow too large */
-            height: auto; /* Maintain aspect ratio */
-        }
-
-        /* Media Queries */
-        /* Large Screens (Desktops) */
-        @media screen and (min-width: 981px) {
-            main {
-                width: 80%;
-            }
-            body figure img {
-                height: 400px;
-            }
-        }
-
-        /* Medium Screens (Tablets) */
-        @media screen and (min-width: 601px) and (max-width: 980px) {
-            main {
-                width: 95%;
-            }
-            body figure img {
-                height: 300px;
-            }
-            table th, table td {
-                font-size: 0.9em;
-            }
-        }
-
-        /* Small Screens (Mobiles) */
-        @media screen and (max-width: 600px) {
-            main {
-                width: 100%;
-            }
-            body figure img {
-                height: 250px;
-            }
-            table th, table td {
-                font-size: 0.8em;
-                padding: 10px;
-            }
-            input[type="submit"], input[type="reset"] {
-                padding: 8px 16px;
-                font-size: 0.9em;
-            }
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        #courses-list + button {
-            display: block; /* Ensures the Add Course button takes the full line */
-            margin-bottom: 10px; /* Adds spacing below the button */
-        }
-
-        label[for="funny"], 
-        #funny {
-            display: block; /* Forces each label and input to be on its own line */
-            margin-top: 10px; /* Adds spacing above the Funny Thing section */
-        }
-
-        
 .slideshow-container {
     position: relative;
     max-width: 600px; 
@@ -303,6 +233,3 @@
     max-width: 600px; /* Ensure it doesn't grow too large */
     height: auto; /* Maintain aspect ratio */
 }
-
-
-
