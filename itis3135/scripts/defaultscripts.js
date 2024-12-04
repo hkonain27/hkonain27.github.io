@@ -23,7 +23,7 @@ function processUserInfo() {
     const favoriteNumber = parseFloat(document.getElementById("favorite-number").value);
 
     // Display greeting message
-    const greeting = `The Gh Boutique welcomes you, ${userName}! We're glad you are doing ${userMood}.`;
+    const greeting = `The HKONAIN Studio welcomes you, ${userName}! We're glad you are doing ${userMood}.`;
     document.getElementById("greeting").textContent = greeting;
 
     // Display polygon name if favorite number is valid

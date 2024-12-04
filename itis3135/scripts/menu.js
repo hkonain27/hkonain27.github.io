@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         footerContainer.innerHTML += `
             <p>
                 Pages built by
-                <a href="ghboutique.com.html">Gh Boutique</a> © 2024
+                <a href="hkonainstudios.com.html">HKONAIN Studio</a> © 2024
             </p>
             <p>
                 <a href="https://www.freecodecamp.org/certification/hkonain/responsive-web-design" target="_blank">
