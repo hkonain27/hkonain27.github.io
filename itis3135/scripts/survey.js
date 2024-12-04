@@ -1,97 +1,160 @@
-const courses = document.getElementById("courses");
-const addCourseBtn = document.getElementById("addCourseBtn");
-const courseInput = document.getElementById("courseInput");
-let count = 0;
+// Define the functions first
 
-courseInput.addEventListener("click", addCourse);
-
-function addCourse() {
-    if (!document.getElementById('deleteBtn')) {
-        deleteBTN();
-    }
-    let addInput = document.createElement('input');
-    addInput.type = 'text';
-    addInput.id = 'coursesUserTaken'; 
-    addInput.className = 'coursesUserTaken';
-    courses.appendChild(addInput);
-    let lineBreak = document.createElement('br');
-    courses.appendChild(lineBreak);
-    count++;
-}
-function displayCourses() {
-    let courseList = ''; 
-    for(let x = 0; x < courses.children.length; x++) {
-        if(courses.children[x].value){
-            courseList += `<li>${courses.children[x].value}</li>`;
-        }
-    }
-    return courseList;
-}
-function deleteBTN() {
-    let deleteBtn = document.createElement('input');
-    deleteBtn.type = 'button';
-    deleteBtn.id = 'deleteBtn';
-    deleteBtn.className = 'deleteBtn';
-    deleteBtn.value = 'Delete';
-    addCourseBtn.appendChild(deleteBtn);
-    let spacing = document.createElement('br');
-    addCourseBtn.appendChild(spacing);
-
-    deleteBtn.addEventListener("click", () => {
-        if (courses.lastElementChild) {
-            courses.removeChild(courses.lastElementChild);
-            courses.removeChild(courses.lastElementChild);
-            count--; 
-            if (count === 0) {
-                deleteBtn.remove();
-            }
-        }
-    });
-}
-
-const name1 = document.getElementById("name");
-const mascot = document.getElementById("mascot");
-const image = document.getElementById("image");
-const caption = document.getElementById("caption");
-const personal = document.getElementById("personal");
-const professional = document.getElementById("professional");
-const academic = document.getElementById("academic");
-const web_dev = document.getElementById("web-dev");
-const platform = document.getElementById("platform");
-const funny = document.getElementById("funny");
-const anything_else = document.getElementById("else");
-const intro = document.getElementById("intro");
-const form = document.getElementById("form");
-
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const courseList = displayCourses();
-
-    let imageLoad = image.files[0];
-    const imageURL = URL.createObjectURL(imageLoad);
-    let text = "<img src=\"" + imageURL + "\" >";
+// Function to add a course text field dynamically
+function addCourseField() {
+    var coursesList = document.getElementById("courses-list");
+    var newCourse = document.createElement("input");
+    newCourse.type = "text";
+    newCourse.name = "courses[]";
+    coursesList.appendChild(newCourse);
     
-    intro.innerHTML = '';
-    intro.innerHTML = `
-    <h3> ${name1.value} || ${mascot.value}</h3>
-    <figure>
-        ${text}
-        <figcaption>${caption.value}</figcaption>
-    </figure>
+    var deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.addEventListener("click", function() {
+        coursesList.removeChild(newCourse);
+        coursesList.removeChild(deleteButton);
+    });
+    coursesList.appendChild(deleteButton);
+}
+
+// Function to validate the form before submission
+function validateForm() {
+    // Example validation logic (ensure that all required fields are filled)
+    const name = document.getElementById("name").value.trim();
+    const mascot = document.getElementById("mascot").value.trim();
+    const image = document.getElementById("image").files.length > 0;
+    const imageCaption = document.getElementById("image-caption").value.trim();
+
+    if (!name || !mascot || !image || !imageCaption) {
+        alert("Please fill in all required fields.");
+        return false;
+    }
+    return true;
+}
+
+
+
+function submitForm(event) {
+    event.preventDefault(); // Prevent form from reloading the page
+
+    const resultDiv = document.getElementById("result");
+    const introContent = document.getElementById("intro-content");
+
+    // Get all form values
+    const name = document.getElementById("name").value;
+    const mascot = document.getElementById("mascot").value;
+    const imageCaption = document.getElementById("image-caption").value;
+    const personalBackground = document.getElementById("personal-background").value;
+    const professionalBackground = document.getElementById("professional-background").value;
+    const academicBackground = document.getElementById("academic-background").value;
+    const webDevelopment = document.getElementById("web-development").value;
+    const platform = document.getElementById("platform").value;
+    const funnyThing = document.getElementById("funny").value;
+    const other = document.getElementById("other").value;
+
+    // Get the uploaded image URL
+    const uploadedImage = document.getElementById("intro-image").files[0];
+    const imageURL = uploadedImage ? URL.createObjectURL(uploadedImage) : "";
+
+    // Get the courses the user entered
+    const courses = Array.from(document.querySelectorAll("input[name='courses[]']"))
+        .map((input) => input.value)
+        .filter((value) => value.trim() !== "");
+
+    // Dynamically populate the content with all form values
+    introContent.innerHTML = `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Mascot:</strong> ${mascot}</p>
+        ${imageURL ? `<p><strong>Image:</strong><br><img src="${imageURL}" alt="Uploaded Image"></p>` : ""}
+        <p><strong>Image Caption:</strong> ${imageCaption}</p>
+        <p><strong>Personal Background:</strong> ${personalBackground}</p>
+        <p><strong>Professional Background:</strong> ${professionalBackground}</p>
+        <p><strong>Academic Background:</strong> ${academicBackground}</p>
+        <p><strong>Background in Web Development:</strong> ${webDevelopment}</p>
+        <p><strong>Primary Computer Platform:</strong> ${platform}</p>
+        <p><strong>Funny Thing:</strong> ${funnyThing}</p>
+        <p><strong>Anything Else?</strong> ${other}</p>
+        <p><strong>Courses Currently Taking:</strong></p>
         <ul>
-            <li><strong>Personal Background:</strong> ${personal.value}</li>
-            <li><strong>Professional Background:</strong>  ${professional.value}</li>
-            <li><strong>Academic Background:</strong> ${academic.value}</li>
-            <li><strong>Web-development background:</strong> ${web_dev.value}</li>
-            <li><strong>Primary Computer Platform:</strong>  ${platform.value}</li>
-            <li><strong>Courses:</strong>
-                <ul>
-                    ${courseList}
-                </ul>
-            </li>
-            <li><strong>Funny/Interesting thing to remember me by:</strong> ${funny.value}</li> 
-            <li><strong>I'd also like to share:</strong> ${anything_else.value}</li>
+            ${courses.map((course) => `<li>${course}</li>`).join("")}
         </ul>
-       
     `;
+
+    // Remove the 'hidden' class to display the result
+    resultDiv.classList.remove("hidden");
+}
+
+
+
+// Attach submitForm function to the form submit event
+document.getElementById("intro-form").addEventListener("submit", submitForm);
+
+
+// Function to load and display the image when it's selected
+function loadImage() {
+    var image = document.getElementById('Intro-image').files[0]; // Get the file from input
+
+    if (image) {  // Check if a file was selected
+        const imageURL = URL.createObjectURL(image);  // Create a URL for the file
+
+        // Create an image element and set its src attribute
+        var imgElement = document.createElement('img');
+        imgElement.src = imageURL;
+
+        // Clear previous content and append the new image
+        var imageContainer = document.getElementById('load-image');
+        imageContainer.innerHTML = ''; // Clear previous image
+        imageContainer.appendChild(imgElement); // Add the new image
+    }
+}
+
+// Attach the loadImage function to the file input onchange event
+document.addEventListener("DOMContentLoaded", () => {
+    const addCourseButton = document.getElementById("add-course");
+    const coursesList = document.getElementById("courses-list");
+
+    
+    function addCourseField() {
+        const coursesList = document.getElementById("courses-list");
+        
+        // Create a wrapper div for the new course and description inputs
+        const courseWrapper = document.createElement("div");
+        courseWrapper.classList.add("course-wrapper");
+    
+        // Create the course input field
+        const courseInput = document.createElement("input");
+        courseInput.type = "text";
+        courseInput.name = "courses[]";
+        courseInput.placeholder = "Enter Course Name";
+
+    
+        // Create a delete button for the course
+        const deleteBtn = document.createElement("button");
+        deleteBtn.type = "button";
+        deleteBtn.textContent = "Remove";
+        deleteBtn.classList.add("delete-course-btn");
+    
+        // Event listener for the delete button
+        deleteBtn.addEventListener("click", () => {
+            coursesList.removeChild(courseWrapper);
+        });
+    
+        // Append all elements to the wrapper
+        courseWrapper.appendChild(courseInput);
+        courseWrapper.appendChild(deleteBtn);
+    
+        // Append the wrapper to the courses list container
+        coursesList.appendChild(courseWrapper);
+    }
+    
+    document.getElementById("add-course-btn").addEventListener("click", addCourseField);
+
+
+    document.getElementById('intro-form').addEventListener('reset', function () {
+        const resultSection = document.getElementById('result');
+        resultSection.classList.add('hidden'); // Hide the result section
+        document.getElementById('intro-content').innerHTML = ''; // Clear the dynamically populated content
+        document.getElementById('load-image').innerHTML = ''; // Clear the loaded image (if any)
+    });
+    
 });
