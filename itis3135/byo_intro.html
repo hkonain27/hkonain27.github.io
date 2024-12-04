@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hafsa Konain's Humble Kangaroo || ITIS 3135 || byo_intro</title>
-  <link rel="stylesheet" href="styles/default.css">
-  <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYO Intro</title>
+    <link rel="stylesheet" href="styles/default.css">
+   
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <div data-include="components/header.html"></div>
-  </header>
-    <main>
+
+    <header>
+        <h1>Hafsa Konain Humble Kangaroo || ITIS 3135</h1>
+        <nav id="menu-main"></nav>
+        <nav id="menu-submenu"></nav>
+        <p>
+            <span id="slogan">"Sharp vision, powerful leap"</span>
+        </p>
+    </header>
+
+    <!--<main>-->
       <h2>Byo Introduction</h2>
       <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
 
@@ -62,17 +71,26 @@
                 <input id="submit" type="submit" value="Submit">
                 <input id="reset" type="reset" value="Reset"> <br><br>
             </div>
-        </form>
-    </main>
-    <footer>
-      <div data-include="components/footer.html"></div>
-    </footer>
-    <script>
-      document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-      document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-      document.getElementById("validation_link_disability").setAttribute("href","https://wave.webaim.org/report#/" + location.href);
-   </script>
-    <script src="scripts/HTMLInclude.min.js"></script>
-    <script src="scripts/survey.js"></script>
+       
+    <div id="result" class="hidden">
+      <!-- This will show after form submission -->
+      <h3>Your BYO Intro Page:</h3>
+      <!-- In the result section where the image will be displayed -->
+      
+      <div id="intro-content">
+          <!-- Dynamically populated content goes here -->
+      </div>
+      <div id="load-image"></div>
+      
+  </div>
+
+  <footer id="footer-container">
+      <p>Please click on the links to navigate through my site</p>
+      <nav id="menu-footer"></nav>
+  </footer>
+  <script src="scripts/menu.js"></script> 
+  <script src="scripts/defaultscripts.js"></script>
+  <script src="scripts/survey.js"></script>
+  
 </body>
 </html>
