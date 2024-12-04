@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Girls Who Code UNCC || EVENTS</title>
+  <link rel="stylesheet" href="styles/project.css">
+
+  <style>
+    /* Cloud Animation */
+    .cloud {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      opacity: 0.6;
+      background: url('https://www.example.com/cloud.png') no-repeat;
+      background-size: contain;
+      width: 200px;
+      height: 100px;
+      animation: moveClouds 15s linear infinite;
+    }
+
+    /* Animation for cloud movement */
+    @keyframes moveClouds {
+      0% {
+        left: 100%;
+        top: 50%;
+      }
+      50% {
+        left: 50%;
+        top: 60%;
+      }
+      100% {
+        left: -200px;
+        top: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+
+  <main>
+    <h2>EVENTS</h2>
+
+    <!-- Animation of shooting stars -->
+    <div id="star1" class="shooting-star"></div>
+    <div id="star2" class="shooting-star"></div>
+    <div id="star3" class="shooting-star"></div>
+    <div id="star4" class="shooting-star"></div>
+
+    <!-- Floating Cloud Animation -->
+    <div class="cloud"></div>
+
+    <!-- Message from GWC Executive Board -->
+    <h3>GWC Events on Hold Until Next Semester</h3>
+    <p>
+      <strong>Dear GWC members and friends,</strong> As the current semester comes to an end, we would like to inform you that **Girls Who Code** at UNCC will not be hosting any events until the start of the next semester (January).
+    </p>
+
+    <p>This semester has been truly exciting, filled with numerous workshops, hackathons, coding challenges, and networking opportunities. We were thrilled to see so many passionate members join us, and together we celebrated women in tech and empowered each other to grow as programmers and leaders.</p>
+
+    <p>As we take a short break, we encourage all our members to relax, recharge, and focus on their academic goals. The GWC executive team will be busy planning for the next semester, where we’ll continue to foster a welcoming community, bring in more hands-on coding experiences, and support our members in achieving their dreams in tech.</p>
+
+    <p>Stay tuned for updates and announcements on our website and social media channels. We can’t wait to welcome you back and continue building a strong network of young women in tech!</p>
+
+    <h2>See you next semester!</h2>
+  </main>
+  
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script>
+    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    document.getElementById("validation_link_disability").setAttribute("href","https://wave.webaim.org/report#/" + location.href);
+  </script>
+  <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

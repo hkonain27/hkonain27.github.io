@@ -1,200 +1,270 @@
-/* General Styles */
-body {
-    font-family: Cambria, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #ffa500; /* Orange background color */
-    color: #333;
-}
-
-/* Global Heading Styles */
-h1 {
-    font-size: 2.5rem;
-    margin: 0;
+body{
+    background-color: #DEF4C6;
     text-align: center;
-    color: white;
+    color: #143601;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Use a single definition for h2 */
-h2 {
-    font-size: 1.8rem;
-    color: #cc5500; /* Complementary dark orange */
-    margin-top: 0;
-    margin-bottom: 20px; /* Adjusted for spacing */
-    text-align: center; /* Center align the h2 globally */
-}
-
-/* Global h3 Styles - Keep this global to avoid over qualification */
-h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-/* Header Styles */
-header {
-    background-color: #ff6700; /* Deeper orange for contrast */
-    padding: 1rem 0.5rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-nav {
-    margin-top: 0.5rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #ffcccb; /* Light coral hover effect */
-}
-
-/* Main Content Styles */
-main {
-    padding: 2rem;
-}
-
-/* Section Styles */
-section {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background-color: #fff8e1; /* Light cream for content sections */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-section p,
-section ul {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-}
-
-ul {
-    list-style-type: square;
-    padding-left: 1.5rem;
-}
-
-/* Event Gallery */
-.event-gallery {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px; /* Increased gap for better spacing */
-}
-
-.event-gallery img {
-    width: 250px; /* Set larger size for images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Slightly rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.event-gallery img:hover {
-    transform: scale(1.1); /* Larger hover effect */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #cc5500; /* Complementary dark orange */
-    color: white;
-    font-size: 0.9rem;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-footer a {
-    color: #ffcccb;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Validation Links */
-.validation-links a {
-    display: inline-block;
-    margin: 0 10px;
-    color: white;
-    font-size: 0.9rem;
+a{
+    color: #2a9134;
     text-decoration: none;
 }
 
-.validation-links a:hover {
-    color: #ffcccb; /* Light coral hover */
+a:hover {
+    color: #73A942;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .responsive-heading {
-        font-size: 2rem; /* Adjust font-size for smaller screens */
-    }
-
-    .event-gallery img {
-        width: 200px; /* Increase size for medium screens */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
-
-@media (max-width: 480px) {
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-
-    .event-gallery img {
-        width: 150px; /* Increase size for small screens */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
-
-/* Event Section Styles */
-#events {
-    text-align: center; /* Center-aligns the entire section */
-    margin-top: 20px;
-}
-
-/* Flexbox for events in rows */
-.event-container {
-    display: flex;
-    justify-content: space-between; /* Ensures events are spaced evenly */
-    margin-bottom: 20px; /* Adds space between event rows */
-}
-
-/* Individual Event Card Styles */
-.event {
-    width: 48%; /* 48% width for each event, leaving space between */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #fdf6e3;
-    transition: transform 0.3s ease;
-}
-
-.event:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Event Image Styles */
-.event-image {
+header{
+    background-color:#AAD576;
     width: 100%;
-    height: auto;
-    display: block;
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
-/* Event Description Styles */
-.event-description {
-    padding: 15px;
+main {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: 1200px;
+
+}
+
+h2{
+    text-align:center;
+}
+
+h3{
+    text-align:center;
+}
+
+img{
+    width: 60%;
+    position: static;
+    left: 90px;
+    padding: 3px;
+
+}
+figure{
     text-align: center;
+    font-style: italic;
+
+}
+
+
+/* Table Styling*/
+
+table{
+    border-style: solid;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    
+}  
+th, td {
+    text-align: left;
+    padding: 10px;
+    border: 2px solid black;
+    color: #143601;
+}
+th{
+    background-color: #73A942;
+    color: #143601;
+}
+tr:nth-child(even) {
+    background-color:  #AAD576;
+}
+
+tr:nth-child(odd) {
+    background-color: #DEF4C6;
+}
+
+/*Form Styling */
+
+.divider {
+    border: 8px double #2a9134;
+    padding: 15px;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+  padding: 3px;
+  margin: 10px;
+  border: 2px solid rgba(0, 128, 0, 0.592);
+  border-radius: 4px;
+}
+form {
+    padding: 2px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #3f9a0bc9;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #AAD576;
+}
+
+
+
+/* slideshow */  
+/*
+.prev {
+    cursor: pointer;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    width: auto;
+    padding: 7px;
+    margin-top: 30px;
+    color: goldenrod;
+    background-color:rgba(50, 9, 139, 0.721);
+}
+.next {
+    cursor: pointer;
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    width: auto;
+    padding: 7px;
+    margin-top: 30px;
+    color: goldenrod;
+    background-color:rgba(50, 9, 139, 0.721);
+}
+*/
+
+
+@media screen and (max-width: 1200px) {
+    h1, h2 {
+        font-size: 35px;
+    }
+
+    .nav1, .nav2 {
+        font-size: 22px;
+    }
+
+    .two {
+        font-size: 16px;
+    }
+
+    img {
+        max-width: 500px;
+    }
+}
+@media screen and (max-width: 900px) {
+    h1, h2 {
+        font-size: 30px;
+    }
+
+    .nav1, .nav2 {
+        font-size: 20px;
+    }
+
+    .two {
+        font-size: 14px;
+    }
+
+    img {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1, h2 {
+        font-size: 25px;
+    }
+
+    .nav1, .nav2 {
+        font-size: 18px;
+    }
+
+    .two {
+        font-size: 12px;
+    }
+
+    img {
+        max-width: 300px;
+    }
+
+}
+
+
+.name{
+    font-family: "Tangerine", cursive;
+    font-style: italic;
+    font-size: 50px;
+    text-align: center;
+}
+
+
+
+
+
+/* Shooting star animation */
+@keyframes shooting-star-top-left {
+    0% { right: 100%; top: 0; }
+    100% { right: 0%; top: 100%; }
+}
+
+@keyframes shooting-star-top-right {
+    0% { left: 100%; top: 0; }
+    100% { left: 0%; top: 100%; }
+}
+
+@keyframes shooting-star-bottom-left {
+    0% { right: 100%; bottom: 0; }
+    100% { right: 0%; bottom: 100%; }
+}
+
+@keyframes shooting-star-bottom-right {
+    0% { left: 100%; bottom: 0; }
+    100% { left: 0%; bottom: 100%; }
+}
+
+/* Shooting star animation */
+@keyframes shooting-star {
+    0% { transform: translate(-100%, -100%); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translate(100%, 100%); opacity: 0; }
+}
+
+.shooting-star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #143601 0%, #2a9134 100%);
+    animation: shooting-star 7s linear infinite;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Individual shooting stars */
+#star1 {
+    top: 10%;
+    right: 0%;
+    animation-name: shooting-star-top-left;
+}
+
+#star2 {
+    top: 10%;
+    left: 0%;
+    animation-name: shooting-star-top-right;
+}
+
+#star3 {
+    bottom: 10%;
+    right: 0%;
+    animation-name: shooting-star-bottom-left;
+}
+
+#star4 {
+    bottom: 10%;
+    left: 0%;
+    animation-name: shooting-star-bottom-right;
 }
