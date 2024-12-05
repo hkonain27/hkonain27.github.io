@@ -1,13 +1,13 @@
 
         /* General Body Styles */
 body {
-    background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(45deg, #1560BD, #1E90FF);
+    background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(45deg, #1b6bcc62, #1e8fff86);
             background-size: auto, cover;
             background-repeat: repeat;
             background-blend-mode: overlay;
             text-align: center;
-    background-color: rgba(65, 154, 218, 0.748);
-    color: rgba(71, 52, 6, 0.873);
+    background-color: rgba(63, 144, 176, 0.477);
+    color: rgba(0, 0, 0, 0.873);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
