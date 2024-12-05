@@ -1,30 +1,52 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+$(document).ready(function () {
+  // Array of images and captions
+  const imageList = [
+      { src: "images2/Hyd.jpeg", caption: "H - Hyderabad" },
+      { src: "images2/Anakeets.jpeg", caption: "A - Anakeesta, Tennessee" },
+      { src: "images2/Fries.jpeg", caption: "F - Fries" },
+      { src: "images2/Sky.jpeg", caption: "S - Sky" },
+      { src: "images2/Avocado.jpeg", caption: "A - Avocado" },
+      { src: "images2/Krispykreme.jpeg", caption: "K - Krispykreme" },
+      { src: "images2/Orange.jpg", caption: "O - Orange Milkshake" },
+      { src: "images/hummus.jpeg", caption: "H - Hummus" },
+      { src: "images/orangemarker.jpeg", caption: "O - Orange Marker" },
+      { src: "images/waterfall.jpeg", caption: "W - Waterfall" },
+      { src: "images/axebodyspray.jpeg", caption: "A - Axe Body Spray" },
+      { src: "images/lake.jpeg", caption: "L - Lake" },
+      { src: "images/elephant.jpeg", caption: "E - Elephant" }
+  ];
 
+  // Dynamically load images into the slideshow
+  imageList.forEach((image) => {
+      $(".slideshow-container .slides").append(`
+          <div class="slide">
+              <img src="${image.src}" alt="${image.caption}">
+              <div class="caption">${image.caption}</div>
+          </div>
+      `);
+  });
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+  let currentSlide = 0;
+  const slides = $(".slide");
+  const totalSlides = slides.length;
 
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  // Function to show a specific slide
+  function showSlide(index) {
+      slides.hide();
+      $(slides[index]).fadeIn(300);
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
+
+  // Next/Previous navigation
+  $(".next").click(function () {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+  });
+
+  $(".prev").click(function () {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+  });
+
+  // Initialize slideshow
+  showSlide(currentSlide);
+});
