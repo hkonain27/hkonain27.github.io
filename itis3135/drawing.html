@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hafsa Konain's Humble Kangaroo || ITIS3135 || drawing</title>
-  <link rel="stylesheet" href="styles/default.css">
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
-  <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Drawing</title>
 
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: #1560BD; /* Denim Blue */
+            color: #FF1493; /* Pink */
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        canvas {
+            border: 2px solid #FFD700; /* Gold */
+            background-color: #FFF8DC; /* Cornsilk */
+            display: block;
+            margin: 20px auto;
+        }
+
+        button {
+            background-color: #8B4513; /* Brown */
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #FFD700; /* Gold */
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div data-include="components/header.html"></div>
-  </header>
-  <h2>Interactive Drawing: Recursive Snowflake</h2>
+    <h1>Sketch Your Drawing</h1>
+    <canvas id="drawingCanvas" width="500" height="400"></canvas>
+    <br>
+    <button onclick="clearCanvas()">Clear Canvas</button>
 
-  <main style="text-align: center;">
-    <p>This interactive snowflake drawing features a bright pink background, adding a playful and vibrant twist to the classic imagery of winter. The warm pink backdrop contrasts beautifully with the intricate, icy patterns of the snowflake, creating a unique visual experience. The recursive nature of the drawing mirrors the natural process of snowflake formation, where smaller branches continuously split into even tinier branches, forming an elaborate, symmetrical design.</p>
-    
-    <p>As you interact with the sketch, you can observe the snowflake’s growth, with each segment carefully rendered in relation to its predecessors. The pink background highlights the delicate details of the snowflake, making the artwork both whimsical and engaging. The choice of color infuses a sense of warmth and joy, offering a fresh perspective on traditional winter themes. It invites viewers to appreciate the beauty of snowflakes beyond their usual icy setting, showcasing them in a new and imaginative light.</p>
-    
-    <div id="canvas-container"></div>
-  </main>
-
-  <footer>
-    <div data-include="components/footer.html"></div>
-  </footer>
-
-  <script>
-    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-    document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-    document.getElementById("validation_link_disability").setAttribute("href","https://wave.webaim.org/report#/" + location.href);
-  </script>
-  <script src="scripts/HTMLInclude.min.js"></script>
-  <script src="scripts/sketch.js"></script>
+    <script src="sketch.js"></script>
+    <script src="scripts/menu.js"></script>
 
 </body>
 </html>

@@ -1,47 +1,41 @@
+// Get the canvas element and its context
+const canvas = document.getElementById('drawingCanvas');
+const ctx = canvas.getContext('2d');
 
-let snowflakes = []; // array to hold snowflake objects
+// Set initial drawing settings
+let isDrawing = false;
+let x = 0;
+let y = 0;
 
-function setup() {
-  createCanvas(600, 400);
-  fill(500);
-  noStroke();
-}
+// Start drawing when the mouse is pressed
+canvas.addEventListener('mousedown', (e) => {
+    isDrawing = true;
+    x = e.offsetX;
+    y = e.offsetY;
+});
 
-function draw() {
-  background('hotpink');
-  let t = frameCount / 60; 
+// Stop drawing when the mouse is released
+canvas.addEventListener('mouseup', () => {
+    isDrawing = false;
+    x = 0;
+    y = 0;
+});
 
-  for (let i = 0; i < random(5); i++) {
-    snowflakes.push(new snowflake());
-  }
-
-  for (let flake of snowflakes) {
-    flake.update(t); 
-    flake.display(); 
-  }
-}
-function snowflake() {
-  this.posX = 0;
-  this.posY = random(-50, 0);
-  this.initialangle = random(0, 2 * PI);
-  this.size = random(2, 5);
-
-  this.radius = sqrt(random(pow(width / 2, 2)));
-
-  this.update = function(time) {
-    let w = 0.6; 
-    let angle = w * time + this.initialangle;
-    this.posX = width / 2 + this.radius * sin(angle);
-
-    this.posY += pow(this.size, 0.5);
-
-    if (this.posY > height) {
-      let index = snowflakes.indexOf(this);
-      snowflakes.splice(index, 1);
+// Draw on the canvas while the mouse is moving
+canvas.addEventListener('mousemove', (e) => {
+    if (isDrawing) {
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.strokeStyle = '#8B4513'; // Brown color for the drawing
+        ctx.lineWidth = 5;
+        ctx.stroke();
+        x = e.offsetX;
+        y = e.offsetY;
     }
-  };
+});
 
-  this.display = function() {
-    ellipse(this.posX, this.posY, this.size);
-  };
+// Function to clear the canvas
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
