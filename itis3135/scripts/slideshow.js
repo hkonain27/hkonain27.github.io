@@ -1,7 +1,7 @@
 $(document).ready(function () {
   // Array of images and captions
   const imageList = [
-      { src: "/images2/Hyd.jpeg", caption: "H - Hyderabad" },
+      { src: "images2/Hyd.jpeg", caption: "H - Hyderabad" },
       { src: "images2/Anakeets.jpeg", caption: "A - Anakeesta, Tennessee" },
       { src: "images2/Fries.jpeg", caption: "F - Fries" },
       { src: "images2/Sky.jpeg", caption: "S - Sky" },
@@ -9,7 +9,7 @@ $(document).ready(function () {
       { src: "images2/Krispykreme.jpeg", caption: "K - Krispykreme" },
       { src: "images2/Orange.jpg", caption: "O - Orange Milkshake" },
       { src: "images2/Nails.jpeg", caption: "N - Nails" },
-      { src: "images2/Airport.jpeg", caption: "A -Airport, Hyderabad, IN" },
+      { src: "images2/Airport.jpeg", caption: "A - Airport, Hyderabad, IN" },
       { src: "images2/Icecream.jpeg", caption: "I - Ice Cream" },
       { src: "images2/Noodles.jpeg", caption: "N - Noodles" }
      
