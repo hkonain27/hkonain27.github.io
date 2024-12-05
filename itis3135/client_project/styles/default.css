@@ -174,7 +174,7 @@ footer a:hover {
 
 /* Individual Event Card Styles */
 .event {
-    width: 100%; /* 100% width for each event, leaving space between */
+    width: 48%; /* 48% width for each event, leaving space between */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
