@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hafsa Konain's Humble Kangaroo || ITIS 3135 || First Scripts</title>
-  <link rel= "stylesheet" href="styles/default.css">
-  <script src="scripts/defaultscripts.js"></script>
-  <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 5 - Web-Based Interaction</title>
+    <link rel="stylesheet" href="styles/default.css">
+    
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-  <header>
-    <div data-include="components/header.html"></div>
-  </header>
+    <header>
+        <h1>Hafsa Konain's Humble Kangaroo || ITIS 3135</h1>
+        <nav id="menu-main"></nav>
+        <nav id="menu-submenu"></nav>
+        <p>
+            <span id="slogan">"Sharp vision, powerful leap"</span>
+        </p>
+    </header>
+    <main>
+        <h2>HKONAIN Studio- First Scripts</h2>
+        <h3 id="datetime"></h3>
+<form id="user-form">
+    <label for="username">Enter your name:</label>
+    <input type="text" id="username" name="username" required><br>
 
-  <main>
-    <h2>First Scripts</h2>
-    <h3>Today is <span id="current-time"></span> </h3>
-    <form id="user-info">
+    <label for="feeling">How are you feeling today?</label>
+    <input type="text" id="feeling" name="feeling" required><br>
+    
+    <label for="feather-accessory">What kind of products are you interested in?</label>
+    <select id="feather-accessory" name="feather-accessory">
+        <option value="hoodie">Hoodie</option>
+        <option value="sweatshirt">Sweat Shirt</option>
+        <option value="zipper">Zipper</option>
+        <option value="home-decor">Home Decor</option>
+        <option value="other">Other</option>
+    </select><br>
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" placeholder="Enter your name">
-    <label for="mood">How are you feeling?</label>
-    <input type="text" id="mood" placeholder="Enter your mood">
-    <button onclick="greetUser()">Submit</button>
-    <p id="greeting"></p>
-    </form>
+    <label for="customization">Would you like a custom order?</label>
+    <input type="checkbox" id="customization" name="customization"><br>
+    
+    <label for="shipping">Preferred shipping region:</label>
+    <select id="shipping" name="shipping">
+        <option value="us">United States</option>
+        <option value="international">International</option>
+    </select><br>
 
-    <label for="favorite-number">Enter your favorite number (0 to 10):</label>
-    <input type="number" id="favorite-number" min="1" max="10">
-    <button class="fbuttons" onclick="showPolygonName()">Submit</button>
-    <p id="inputText"></p>
+    <label for="favorite-color">What is your favorite color for accessories?</label>
+    <input type="text" id="favorite-color" name="favorite-color"><br>
 
-    <h4>Do you believe that kangaroo exist? (yes or no)</h4>
-        <input id="kangaroo">
-        <button type="button" onclick = "kangaroo()">Submit</button>
-        <p id="answerKangaroo"></p>
+    <button type="button" id="submit-button">Submit</button>
+</form>
 
-    <div class="buttons">
-      <button class="fbuttons" onclick="generateCompliment()">Compliment Generator</button>
-    </div>
-    <p id="inputText1"></p>
-
-    <button onclick="randomFact()">Radom Facts</button>
-    <p id="randomFact"></p>
-
-    <button onclick="randomKangarooFact()">Magical powers of Kangaroo!</button>
-    <p id="randomKangarooFact"><p>
-
-    <button onclick="sayGoodbye()">Say Good Bye</button>
-    <p id="goodBye"></p>
-
-  </main>
-  
-  <footer>
-        <div data-include="components/footer.html"></div>
+    </main>
+    <footer id="footer-container">
+        <p>Please click on the links to navigate through my site</p>
+        <nav id="menu-footer"></nav>
     </footer>
-    <script src="scripts/defaultScript.js"></script>
-    <script>
-      document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-      document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-      document.getElementById("validation_link_disability").setAttribute("href","https://wave.webaim.org/report#/" + location.href);
-   </script>
-   <script src="scripts/HTMLInclude.min.js"></script>
-    <script>scriptTest()</script>
+    <script src="scripts/menu.js"></script> 
+    <script src="scripts/defaultscripts.js"></script> 
 </body>
 </html>
