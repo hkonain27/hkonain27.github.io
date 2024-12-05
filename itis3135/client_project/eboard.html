@@ -1,142 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Girls Who Code || E-Board Members</title>
-  <link rel="stylesheet" href="styles/project.css">
-  <style>
-        * {
-        box-sizing: border-box;
-        }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Project - Index</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        /* Slideshow Styles */
 
-        .container {
-        position: relative;
-        border: #143601 15px solid;
-        text-align:left;
-        }
+.slideshow-container {
+    max-width: 500px; 
+    margin: 20px auto;
+    position: relative;
+    border: 5px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0; 
+    height: auto; 
+}
 
-        .slides {
-        display: none;
-        }
+.slides {
+    display: none;
+}
 
-        .cursor {
-        cursor: pointer;
-        }
+.active-slide {
+    display: block;
+}
 
-        .prev,
-        .next {
-        cursor: pointer;
-        position: absolute;
-        top: 40%;
-        width: auto;
-        padding: 16px;
-        margin-top: -50px;
-        color: #AAD576;
-        font-weight: bold;
-        font-size: 20px;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        -webkit-user-select: none;
-        }
+.slides img {
+    width: 100%; 
+    height: auto; 
+    border-bottom: 1px solid #ddd;
+    display: block; 
+}
 
-        .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-        }
+.caption {
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
 
-        .prev{
-            left: 0;
-        }
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+}
 
-        .prev:hover,
-        .next:hover {
-            background-color: #2a9134;
-        }
+.prev {
+    left: 10px;
+}
 
-        .numbertext {
-        color: #143601;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        padding-top: 4px;
-        }
+.next {
+    right: 10px;
+}
 
-        .container {
-        text-align: center;
-        padding: 2px 16px;
-        color: #2a9134;
-        }
-  </style>
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot-active {
+    background-color: #717171; 
+}
+
+
+
+
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-  <header>
-    <div data-include="components/header.html"></div>
-  </header>
-  <main>
-    <h2>E-BOARD MEMBERS</h2>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
     
-    <div class="container">   
-    <!-- slide 1  -->
-    <div class="slides">
-      <div class="numbertext">1 / 5</div>
-      <img src="images/intro.jpeg" style="width:50%" alt="slideshow">
-      <p><strong>Introducing our Executive Board Members of this year!</strong></p>
-    </div>
-    
-    <!-- slide 2  -->
-    <div class="slides" style="display: none;">
-      <div class="numbertext">2 / 5</div>
-      <img src="images/president.jpeg" style="width:50%" alt="slideshow">
-      <p><strong>President</strong></p>
-    </div>
-    <!-- slide 3  -->
-    <div class="slides" style="display: none;">
-        <div class="numbertext">3 / 5</div>
-        <img src="images/VP.jpeg" style="width:50%" alt="slideshow">
-        <p><strong>Vice President</strong></p>
-      </div>
-      
-    <!-- slide 4  -->
-    <div class="slides" style="display: none;">
-      <div class="numbertext">4 / 5</div>
-      <img src="images/treasurer.jpeg" style="width:50%" alt="slideshow">
-      <p><strong>Treasurer</strong></p>
-    </div>
-    
-    <!-- slide 5  -->
-    <div class="slides" style="display: none;">
-      <div class="numbertext">5 / 5</div>
-      <img src="images/eventchair.jpeg" style="width:50%" alt="slideshow">
-      <p><strong>Events Chair</strong></p>
-    </div>
-    
-    <!-- slide 6  -->
-    <div class="slides" style="display: none;">
-      <div class="numbertext">6 / 5</div>
-      <img src="images/eventchair-2.jpeg" style="width:50%" alt="slideshow">
-      <p><strong>Events Chair</strong></p>
-    </div>
-  
-    
-    <!-- cursor -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  
-  </main>
-  
-  <footer>
-    <div data-include="components/footer.html"></div>
-  </footer>
+    <main>
+        <!-- Slideshow Section -->
+        <div class="slideshow-container">
+            <div class="slides active-slide">
+                <img src="images/president.jpeg" alt="President">
+                <div class="caption">President</div>
+            </div>
+            <div class="slides">
+                <img src="images/VP.jpeg" alt="Vice President">
+                <div class="caption">Vice President</div>
+            </div>
+            <div class="slides">
+                <img src="images/treasurer.jpeg" alt="Marketing 1">
+                <div class="caption">Treasurer</div>
+            </div>
+            <div class="slides">
+                <img src="images/eventchair.jpeg" alt="Marketing 2">
+                <div class="caption">Events Chair</div>
+            </div>
+            <div class="slides">
+                <img src="images/eventchair-2.jpeg" alt="Marketing 3">
+                <div class="caption">Events Chair</div>
+            </div>
+            
+            <!-- Navigation Buttons -->
+<button id="prev-btn" class="prev nav-button">❮</button>
+<button id="next-btn" class="next nav-button">❯</button>
 
-    <script>
-      document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-      document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-      document.getElementById("validation_link_disability").setAttribute("href","https://wave.webaim.org/report#/" + location.href);
-   </script>
-    <script src="scripts/HTMLInclude.min.js"></script>
-    <script src="scripts/slideshow.js"></script>
+        </div>
+        <!-- Dots -->
+        <div class="dots">
+            <span class="dot active" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+        </div>
+    </main>
+    
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script> 
+    <script src="scripts/slideshow.js"></script> 
 </body>
 </html>

@@ -1,84 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Girls Who Code UNCC || EVENTS</title>
-  <link rel="stylesheet" href="styles/project.css">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Client Project - Index</title>
+        <link rel="stylesheet" href="styles/default.css">
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>    
+    </head>
+    <body>
+        <header>
+            <div data-include="components/header.html"></div>
+        </header>
 
-  <style>
-    /* Cloud Animation */
-    .cloud {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      opacity: 0.6;
-      background: url('https://www.example.com/cloud.png') no-repeat;
-      background-size: contain;
-      width: 200px;
-      height: 100px;
-      animation: moveClouds 15s linear infinite;
-    }
+        <main>
+            <section id="events">
+                <h2>Some of the 2024 year events</h2>
+        
+                <!-- First Row (Event 1 and Event 2) -->
+                <div class="event-container">
+                    <!-- Event 1 -->
+                    <div class="event">
+                        <img src="images/presidenttalk.jpeg" alt="Event 1 Image" class="event-image">
+                        <div class="event-description">
+                            <h3>Field Day</h3>
+                            <p>Join us for some fun and games this Thursday at our field day event on field 14A, race you there 😈🏃💨</p>
+                        </div>
+                    </div>
+        
+                    <!-- Event 2 -->
+                    <div class="event">
+                        <img src="images/studentorg.jpeg" alt="Event 2 Image" class="event-image">
+                        <div class="event-description">
+                            <h3>Karoake Night</h3>
+                            <p>Join us to perform some of your favorite songs on the stage! No matter your culture or background, let's celebrate through music. Pick your favorite songs, and join the fun!</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Second Row (Event 3 and Event 4) -->
+                <div class="event-container">
+                    <!-- Event 3 -->
+                    <div class="event">
+                        <img src="images/e3.png" alt="Event 3 Image" class="event-image">
+                        <div class="event-description">
+                            <h3>Holi 2K24</h3>
+                            <p>Holi is called the festival of colors, spring, and love. It is the most popular and significant Hindu holiday that marks the beginning of Spring. The festival is symbolic of the triumph of good over evil and has been celebrated since the 4th century CE. We will be providing colors free of charge. We are honored to have DJ Maks of Maks Entertainment providing live DJ services for the event. This event is funded in part by the Student Government Association with your student activity fees.</p>
+                        </div>
+                    </div>
+        
+                    <!-- Event 4 -->
+                    <div class="event">
+                        <img src="images/e4.png" alt="Event 4 Image" class="event-image">
+                        <div class="event-description">
+                            <h3>SASA x SKY Yoga and Meditation</h3>
+                            <p>A spin-off of our monthly Yoga Event, we are collaborating with SASA (South Asian Student Association) for a February Yoga Event! We will have certified SKY instructors leading some group yoga exercises indoors. Yoga mats will be provided, but supply is limited. This is an opportunity to have a peaceful evening and to meet and get to know new people with similar interests!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-    /* Animation for cloud movement */
-    @keyframes moveClouds {
-      0% {
-        left: 100%;
-        top: 50%;
-      }
-      50% {
-        left: 50%;
-        top: 60%;
-      }
-      100% {
-        left: -200px;
-        top: 50%;
-      }
-    }
-  </style>
-</head>
+        <footer>
+            <div data-include="components/footer.html"></div>
+        </footer>
 
-<body>
-  <header>
-    <div data-include="components/header.html"></div>
-  </header>
-
-  <main>
-    <h2>EVENTS</h2>
-
-    <!-- Animation of shooting stars -->
-    <div id="star1" class="shooting-star"></div>
-    <div id="star2" class="shooting-star"></div>
-    <div id="star3" class="shooting-star"></div>
-    <div id="star4" class="shooting-star"></div>
-
-    <!-- Floating Cloud Animation -->
-    <div class="cloud"></div>
-
-    <!-- Message from GWC Executive Board -->
-    <h3>GWC Events on Hold Until Next Semester</h3>
-    <p>
-      <strong>Dear GWC members and friends,</strong> As the current semester comes to an end, we would like to inform you that **Girls Who Code** at UNCC will not be hosting any events until the start of the next semester (January).
-    </p>
-
-    <p>This semester has been truly exciting, filled with numerous workshops, hackathons, coding challenges, and networking opportunities. We were thrilled to see so many passionate members join us, and together we celebrated women in tech and empowered each other to grow as programmers and leaders.</p>
-
-    <p>As we take a short break, we encourage all our members to relax, recharge, and focus on their academic goals. The GWC executive team will be busy planning for the next semester, where we’ll continue to foster a welcoming community, bring in more hands-on coding experiences, and support our members in achieving their dreams in tech.</p>
-
-    <p>Stay tuned for updates and announcements on our website and social media channels. We can’t wait to welcome you back and continue building a strong network of young women in tech!</p>
-
-    <h2>See you next semester!</h2>
-  </main>
-  
-  <footer>
-    <div data-include="components/footer.html"></div>
-  </footer>
-
-  <script>
-    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-    document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-    document.getElementById("validation_link_disability").setAttribute("href","https://wave.webaim.org/report#/" + location.href);
-  </script>
-  <script src="scripts/HTMLInclude.min.js"></script>
-</body>
+        <script src="scripts/HTMLInclude.min.js"></script> 
+    </body>
 </html>
