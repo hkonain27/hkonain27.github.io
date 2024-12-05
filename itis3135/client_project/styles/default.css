@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    font-family: Cambria, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #aa00ff67; /* Orange background color */
+    color: #333;
+}
+
+/* Global Heading Styles */
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+    color: rgb(134, 29, 199);
+}
+
+/* Use a single definition for h2 */
+h2 {
+    font-size: 1.8rem;
+    color: #cc00bb60; /* Complementary dark orange */
+    margin-top: 0;
+    margin-bottom: 20px; /* Adjusted for spacing */
+    text-align: center; /* Center align the h2 globally */
+}
+
+/* Global h3 Styles - Keep this global to avoid over qualification */
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Header Styles */
+header {
+    background-color: #a41e3ff5; /* Deeper orange for contrast */
+    padding: 1rem 0.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcccb; /* Light coral hover effect */
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff8e1; /* Light cream for content sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section p,
+section ul {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+/* Event Gallery */
+.event-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Increased gap for better spacing */
+}
+
+.event-gallery img {
+    width: 250px; /* Set larger size for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-gallery img:hover {
+    transform: scale(1.1); /* Larger hover effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #4a0c29a1; /* Complementary dark orange */
+    color: white;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #ffcccb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Validation Links */
+.validation-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.validation-links a:hover {
+    color: #ffcccb; /* Light coral hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .responsive-heading {
+        font-size: 2rem; /* Adjust font-size for smaller screens */
+    }
+
+    .event-gallery img {
+        width: 200px; /* Increase size for medium screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .event-gallery img {
+        width: 150px; /* Increase size for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Event Section Styles */
+#events {
+    text-align: center; /* Center-aligns the entire section */
+    margin-top: 20px;
+}
+
+/* Flexbox for events in rows */
+.event-container {
+    display: flex;
+    justify-content: space-between; /* Ensures events are spaced evenly */
+    margin-bottom: 20px; /* Adds space between event rows */
+}
+
+/* Individual Event Card Styles */
+.event {
+    width: 48%; /* 48% width for each event, leaving space between */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fdf6e3;
+    transition: transform 0.3s ease;
+}
+
+.event:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Event Image Styles */
+.event-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Event Description Styles */
+.event-description {
+    padding: 15px;
+    text-align: center;
+}
