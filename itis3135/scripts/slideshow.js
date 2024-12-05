@@ -8,12 +8,11 @@ $(document).ready(function () {
       { src: "images2/Avocado.jpeg", caption: "A - Avocado" },
       { src: "images2/Krispykreme.jpeg", caption: "K - Krispykreme" },
       { src: "images2/Orange.jpg", caption: "O - Orange Milkshake" },
-      { src: "images/hummus.jpeg", caption: "H - Hummus" },
-      { src: "images/orangemarker.jpeg", caption: "O - Orange Marker" },
-      { src: "images/waterfall.jpeg", caption: "W - Waterfall" },
-      { src: "images/axebodyspray.jpeg", caption: "A - Axe Body Spray" },
-      { src: "images/lake.jpeg", caption: "L - Lake" },
-      { src: "images/elephant.jpeg", caption: "E - Elephant" }
+      { src: "images2/Nails.jpeg", caption: "N - Nails" },
+      { src: "images2/Airport.jpeg", caption: "A -Airport, Hyderabad, IN" },
+      { src: "images2/Icecream.jpeg", caption: "I - Ice Cream" },
+      { src: "images2/Noodles.jpeg", caption: "N - Noodles" },
+     
   ];
 
   // Dynamically load images into the slideshow
