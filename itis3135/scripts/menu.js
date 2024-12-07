@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Slideshow", url: "slideshow.html" },
         { name: "Drawing", url: "drawing.html" },
         { name: "CRAPPY", url: "stuff/crappysite.html" },
-        { name: "Hobby", url: "hobby/hobby.html" },
+        { name: "Hobby", url: "hobby/index.html" },
         { name: "Client Project", url: "client_project/index.html" }
     ];
 
