@@ -1,11 +1,11 @@
 /* General Styles */
 body {
-    font-family: Pacifico, cursive;
+    font-family: Roboto;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     background-color: #537d3da3; /* Green background color */
-    color: #333;
+    color: #000000;
 }
 
 /* Global Heading Styles */
@@ -13,13 +13,13 @@ h1 {
     font-size: 2.5rem;
     margin: 0;
     text-align: center;
-    color: rgba(135, 188, 221, 0.927);
+    color: rgba(24, 23, 23, 0.887);
 }
 
 /* Use a single definition for h2 */
 h2 {
     font-size: 1.8rem;
-    color: #537d3da3; /* Complementary dark orange */
+    color: #121111; /* Complementary dark orange */
     margin-top: 0;
     margin-bottom: 20px; /* Adjusted for spacing */
     text-align: center; /* Center align the h2 globally */
@@ -52,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffcccb; /* Light coral hover effect */
+    color: #df716f68; /* Light coral hover effect */
 }
 
 /* Main Content Styles */
@@ -64,7 +64,7 @@ main {
 section {
     margin-bottom: 2rem;
     padding: 1rem;
-    background-color: #8c92d4; /* Light cream for content sections */
+    background-color: #80c29a3f /* Light cream for content sections */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -113,7 +113,7 @@ footer {
 }
 
 footer a {
-    color: #ffcccb;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
@@ -132,7 +132,7 @@ footer a:hover {
 }
 
 .validation-links a:hover {
-    color: #ffcccb; /* Light coral hover */
+    color: #ffffff; /* Light coral hover */
 }
 
 /* Responsive Design */
