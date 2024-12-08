@@ -5,7 +5,7 @@ body {
             background-size: auto, cover;
             background-repeat: repeat;
             background-blend-mode: overlay;
-            text-align: center;
+            text-align: left;
     background-color: rgba(63, 144, 176, 0.477);
     color: rgba(0, 0, 0, 0.873);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -13,7 +13,7 @@ body {
 
 /* Style for Links */
 a {
-    color: rgb(11, 50, 134);
+    color: rgb(128, 0, 128);
     text-decoration: none;
 }
 
@@ -68,16 +68,16 @@ th, td {
 }
 
 th {
-    background-color: rgba(103, 22, 242, 0.745);
+    background-color: rgba(221, 111, 175, 0.745);
     color: white;
 }
 
 tr:nth-child(even) {
-    background-color: rgba(116, 88, 202, 0.6);
+    background-color: rgba(198, 202, 88, 0.236);
 }
 
 tr:nth-child(odd) {
-    background-color: rgba(113, 110, 207, 0.8);
+    background-color: rgba(198, 202, 88, 0.236);
 }
 
 /* Form Styling */
