@@ -64,7 +64,7 @@ main {
 section {
     margin-bottom: 2rem;
     padding: 1rem;
-    background-color: #80c29a3f /* Light cream for content sections */
+    background-color: #80c29a3f; /* Light cream for content sections */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
