@@ -16,42 +16,50 @@
         <p>
             <span id="slogan">"Sharp vision, powerful leap"</span>
         </p>
-    </header>
-    <main>
-        <h2>HKONAIN Studio- First Scripts</h2>
-        <h3 id="datetime"></h3>
-<form id="user-form">
-    <label for="username">Enter your name:</label>
-    <input type="text" id="username" name="username" required><br>
-
-    <label for="feeling">How are you feeling today?</label>
-    <input type="text" id="feeling" name="feeling" required><br>
-    
-    <label for="feather-accessory">What kind of products are you interested in?</label>
-    <select id="feather-accessory" name="feather-accessory">
-        <option value="hoodie">Hoodie</option>
-        <option value="sweatshirt">Sweat Shirt</option>
-        <option value="zipper">Zipper</option>
-        <option value="home-decor">Home Decor</option>
-        <option value="other">Other</option>
-    </select><br>
-
-    <label for="customization">Would you like a custom order?</label>
-    <input type="checkbox" id="customization" name="customization"><br>
-    
-    <label for="shipping">Preferred shipping region:</label>
-    <select id="shipping" name="shipping">
-        <option value="us">United States</option>
-        <option value="international">International</option>
-    </select><br>
-
-    <label for="favorite-color">What is your favorite color for accessories?</label>
-    <input type="text" id="favorite-color" name="favorite-color"><br>
-
-    <button type="button" id="submit-button">Submit</button>
-</form>
-
-    </main>
+        <header>
+            <main>
+                <h2>HKONAIN Studio - First Scripts</h2>
+                <h3 id="datetime"></h3>
+                
+                <form id="user-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    
+                    <label for="mood">How are you feeling?</label>
+                    <input type="text" id="mood" placeholder="Enter your mood">
+                    <button type="button" id="greet-button">Submit</button>
+                    <p id="greeting"></p>
+        
+                    <label for="favorite-number">Enter your favorite number (0 to 10):</label>
+                    <input type="number" id="favorite-number" min="1" max="10">
+                    <button type="button" class="fbuttons" id="polygon-button">Submit</button>
+                    <p id="inputText"></p>
+        
+                    <h4>Do you believe that mermaids exist? (yes or no)</h4>
+                    <input id="mermaid">
+                    <button type="button" id="mermaid-button">Submit</button>
+                    <p id="answerMermaid"></p>
+        
+                    <div class="buttons">
+                        <button type="button" class="fbuttons" id="compliment-button">Compliment Generator</button>
+                    </div>
+                    <p id="inputText1"></p>
+        
+                    <button type="button" id="random-facts-button">Random Facts</button>
+                    <p id="randomFact"></p>
+        
+                    <button type="button" id="mermaid-fact-button">Magical powers of Mermaids!</button>
+                    <p id="randomMermaidFact"></p>
+        
+                    <button type="button" id="goodbye-button">Say Good Bye</button>
+                    <p id="goodBye"></p>
+                </form>
+        
+            </main>
+            
+            <script src="scripts.js"></script> <!-- Link to your external JS file -->
+        </header>
+        
     <footer id="footer-container">
         <p>Please click on the links to navigate through my site</p>
         <nav id="menu-footer"></nav>
