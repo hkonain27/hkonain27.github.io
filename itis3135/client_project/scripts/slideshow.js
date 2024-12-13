@@ -1,37 +1,52 @@
-// JavaScript for slideshow functionality
-let currentIndex = 0;
-const slides = document.querySelectorAll(".slides");
-const dots = document.querySelectorAll(".dot");
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle("active-slide", i === index);
+$(document).ready(function () {
+    // Array of images and captions
+    const imageList = [
+        { src: "images/president.jpeg", caption: "President" },
+        { src: "images/VP.jpeg", caption: "Vice President" },
+        { src: "images/treasurer.jpeg", caption: "Treasurer" },
+        { src: "images/eventchair.jpeg", caption: "Events Chair" },
+        { src: "images/eventchair-2.jpeg", caption: "Events Chair" }
+    ];
+  
+    // Dynamically load images into the slideshow
+    imageList.forEach((image) => {
+        $(".slideshow-container .slides").append(`
+            <div class="slide">
+                <img src="${image.src}" alt="${image.caption}">
+                <div class="caption">${image.caption}</div>
+            </div>
+        `);
     });
-    dots.forEach((dot, i) => {
-        dot.classList.toggle("dot-active", i === index);  // Changed to use .dot-active
+  
+    let currentSlide = 0;
+    const slides = $(".slide");
+    const totalSlides = slides.length;
+  
+    // Function to show a specific slide
+    function showSlide(index) {
+        slides.hide();
+        $(slides[index]).fadeIn(300);
+    }
+  
+    // Next/Previous navigation
+    $(".next").click(function () {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
     });
-}
-
-function plusSlides(direction) {
-    currentIndex = (currentIndex + direction + slides.length) % slides.length;
-    showSlide(currentIndex);
-}
-
-function currentSlide(index) {
-    currentIndex = index - 1;
-    showSlide(currentIndex);
-}
-
-// Attach event listeners to navigation buttons and dots
-document.getElementById("prev-btn").addEventListener("click", () => plusSlides(-1));
-document.getElementById("next-btn").addEventListener("click", () => plusSlides(1));
-
-dots.forEach((dot) => {  // Added parentheses around the arrow function argument
-    dot.addEventListener("click", (e) => {
-        const slideIndex = parseInt(e.target.getAttribute("data-slide")) - 1;
-        currentSlide(slideIndex);
+  
+    $(".prev").click(function () {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
     });
-});
-
-// Auto-play functionality
-setInterval(() => plusSlides(1), 5000); // Auto-slide every 5 seconds
+  
+    // Dots navigation
+    $(".dot").click(function () {
+        const index = $(this).index();
+        currentSlide = index;
+        showSlide(currentSlide);
+    });
+  
+    // Initialize slideshow
+    showSlide(currentSlide);
+  });
+  
